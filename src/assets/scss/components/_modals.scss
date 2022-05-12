@@ -1,0 +1,14 @@
+.modal {
+
+    &__close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+
+        @include media-breakpoint-down(sm) {
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+}

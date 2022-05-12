@@ -1,0 +1,45 @@
+<% if (type=='text' || type=='email' || type=='tel' ) { %>
+
+    <div class="form__group">
+        <input type="<%= type %>" name="<%= id %>" id="<%= id %>" class="form__control" placeholder="<%= label %>">
+        <label for="<%= id %>" class="form__label">
+            <%= label %>
+        </label>
+    </div>
+
+    <% } else if (type=='textarea' ) { %>
+
+        <div class="form__group">
+            <textarea name="<%= id %>" id="<%= id %>" class="form__control form__control--textarea" rows="2" placeholder="<%= label %>"></textarea>
+            <label for="<%= id %>" class="form__label">
+                <%= label %>
+            </label>
+        </div>
+
+
+        <% } else if (type=='select' ) { %>
+
+            <div class="form__group">
+                <label for="<%= id %>" class="form__label sr-only">
+                    <%= label %>
+                </label>
+                <select name="<%= id %>" id="<%= id %>" class="form__control form__control--select" data-placeholder="<%= label %>">
+                    <option></option>
+                    <option value="Значение 1">Energy, Chemicals, Oil & Gas</option>
+                    <option value="Значение 2">Water, waste, environmental services</option>
+                    <option value="Значение 3">Значение 3</option>
+                </select>
+            </div>
+
+
+            <% } else if (type=='radio' || type=='checkbox' ) { %>
+
+                <div class="form__group form__group--<%= type %>">
+                    <input type="<%= type %>" name="<%= name %>" id="<%= id %>" class="form__control">
+                    <label for="<%= id %>" class="form__label">
+                        <%= label %>
+                    </label>
+                </div>
+
+
+                <% } %>

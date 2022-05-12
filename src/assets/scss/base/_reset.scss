@@ -1,0 +1,11 @@
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+input, textarea, select, button, a {
+    &:focus {
+        outline: none;
+    }
+}
