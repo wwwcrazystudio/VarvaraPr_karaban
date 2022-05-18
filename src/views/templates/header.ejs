@@ -7,11 +7,49 @@
     <title>
         <%= title %>
     </title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="header">
-
+        <div class="container">
+            <div class="header__row">
+                <a href="/" class="header__logo">
+                    <img src="<%=require('@img/logo.png') %>" alt="">
+                </a>
+                <ul class="header__nav">
+                    <li><a href="">О нас</a></li>
+                    <li><a href="">Детский сад</a></li>
+                    <li><a href="">Занятия</a></li>
+                    <li><a href="">Галерея</a></li>
+                    <li><a href="">Расписание</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
+    <section class="banner">
+        <div class="container">
+            <div class="banner__content">
+                <h1 class="banner__title">
+                    Детский клуб
+                    <strong>
+                        Любопытная Варвара
+                    </strong>
+                </h1>
+                <p class="banner__txt">
+                    При записи на сайте - пробное занятие бесплатно! 
+                </p>
+                <button class="banner__btn js--openOfferTxt">
+                    <span class="btn-content">Попробовать бесплатно</span>
+                    <span class="linear"></span>
+                </button>
+            </div>
+            <div class="banner__image">
+                <img src="<%=require('@img/Banner/photo.png') %>" alt="">
+            </div>
+        </div>
+    </section>

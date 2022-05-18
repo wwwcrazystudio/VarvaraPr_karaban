@@ -1,3 +1,18 @@
 h1 {
     font-weight: 700;
 }
+
+%block-title {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    @extend %font;
+    strong {
+        font-weight: 700;
+        font-size: 30px;
+        color: #F18E85;
+        line-height: 36px;
+        margin-top: 10px;
+        display: block;
+    }
+}
