@@ -16,3 +16,25 @@ h1 {
         display: block;
     }
 }
+
+@media(max-width: 991px) {
+    %block-title {
+        font-size: 30px;
+        line-height: 36px;
+        strong {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    %block-title {
+        font-size: 15px;
+        line-height: 18px;
+        strong {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}

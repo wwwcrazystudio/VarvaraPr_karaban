@@ -2,7 +2,16 @@
 import '../scss/main.scss';
 import { tns } from "tiny-slider";
 import 'jquery-nice-select';
+import 'magnific-popup';
 $('.select-init').niceSelect();
+
+$('.image-popup-zoom').magnificPopup({
+    type: 'image',
+    zoom: {
+        enabled: true,
+        duration: 300
+    }
+    });
 
 $('.reviews__item-more').click(function () {
     if($(this).hasClass('toggled')) {
@@ -52,20 +61,48 @@ $('.backdrop, .modal__close').click(function() {
 });
 
 if($('.gallery__slider_col3').length) {
-    let gallerySlider3 = tns({
+    let gallerySlider4 = tns({
         container: '.gallery__slider_col3',
         items: 3,
         slideBy: 1,
         gutter: 111,
+        responsive: {
+            300: {
+                gutter: 10,
+                items: 2,
+              },
+            767: {
+                gutter: 40,
+                items: 2,
+              },
+            991: {
+               gutter: 111,
+              items: 3,
+            },
+          }
     });
 }
 
 if($('.gallery__slider_col2').length) {
     let gallerySlider3 = tns({
         container: '.gallery__slider_col2',
-        items: 2,
+        items: 3,
         slideBy: 1,
-        gutter: 114,
+        gutter: 111,
+        responsive: {
+            300: {
+                gutter: 10,
+                items: 2,
+              },
+            767: {
+                gutter: 40,
+                items: 2,
+              },
+            991: {
+               gutter: 111,
+              items: 3,
+            },
+          }
     });
 }
 
@@ -74,6 +111,27 @@ if($('.workers__slider').length) {
         container: '.workers__slider',
         items: 2,
         slideBy: 1,
+        responsive: {
+            300: {
+                fixedWidth: 166,
+                gutter: 15,
+                items: 1,
+              },
+            767: {
+              gutter: 55,
+              fixedWidth: false,
+              slideBy: 1,
+              items: 2,
+            },
+            1199: {
+              items: 2,
+              gutter: 135,
+            },
+            1440: {
+                items: 2,
+                gutter: 0,
+              }
+          }
     });
 }
 
@@ -83,5 +141,28 @@ if($('.reviews__slider').length) {
         items: 3,
         slideBy: 1,
         gutter: 135,
+        responsive: {
+            300: {
+                gutter: 20,
+                items: 2,
+              },
+            768: {
+                gutter: 48,
+                items: 2,
+              },
+            991: {
+              gutter: 35,
+            },
+            1199: {
+              items: 3,
+              gutter: 135,
+            }
+          }
     });
 }
+
+
+$('.header__burger').click(function () {
+    $(this).toggleClass('open');
+    $('.header__mobnav').toggleClass('open');
+});

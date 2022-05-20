@@ -145,3 +145,39 @@
         color: #000;
     }
 }
+
+@media(max-width: 991px) {
+    %btn-1 {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 12px 26px;
+    }
+    %btn-2 {
+        font-size: 25px;
+        line-height: 30px;
+        padding: 5px 38px;
+    }
+    %btn-3 {
+        font-size: 15px;
+        line-height: 18px;
+        padding: 7px 16px;
+    }
+}
+
+@media(max-width: 767px) {
+    %btn-1 {
+        font-size: 13px;
+        line-height: 16px;
+        padding: 5px 15px;
+    }
+    %btn-2 {
+        font-size: 12px;
+        line-height: 14.4px;
+        padding: 2.5px 19px;
+    }
+    %btn-3 {
+        padding: 5px 8.5px;
+        font-size: 8px;
+        line-height: 10px;
+    }
+}

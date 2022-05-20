@@ -5,6 +5,7 @@
 @import "~sass-rem/rem";
 @import "mixins/utility";
 @import "base/variables";
+@import "~magnific-popup/dist/magnific-popup.css";
 @import "base/fonts";
 @import "~jquery-nice-select/css/nice-select";
 @import "base/reset";
@@ -308,6 +309,13 @@ body {
                     @extend %font;
                 }
             }
+            &-price {
+                font-size: 8px;
+                line-height: 9.6px;
+                @extend %font;
+                margin-top: 5px;
+                display: none;
+            }
             &-txt {
                 margin-bottom: 0;
             }
@@ -404,6 +412,7 @@ body {
     &-item {
         box-shadow: 3px 4px 5px rgba(126, 125, 125, 0.22);
         border-radius: 22px;
+        height: 100%;
         overflow: hidden;
         &__img {
             width: 100%;
@@ -414,9 +423,11 @@ body {
             padding-top: 18px;
             padding-left: 32px;
             padding-right: 23px;
+            padding-bottom: 80px;
+            position: relative;
             border: 1px solid #000000;
             border-top: none;
-            padding-bottom: 18px;
+            height: calc(100% - 280px);
             border-radius: 0px 0px 22px 22px;
             background: #fff;
         }
@@ -454,7 +465,10 @@ body {
             &-wrapper {
                 display: flex;
                 justify-content: center;
-                margin-top: 24px;
+                position: absolute;
+                bottom: 18px;
+                left: 0;
+                right: 0;
             }
             @extend %btn-3;
         }
@@ -743,6 +757,9 @@ body {
         margin-right: -23px;
         box-shadow: 3px 4px 5px rgba(126, 125, 125, 0.22);
         border-radius: 15px;
+        width: 100%;
+        max-width: 851px;
+        height: 526px;
         overflow: hidden;
     }
     &-info {
@@ -836,7 +853,7 @@ body {
     }
     &__slider_col2 {
         .gallery-slide__img {
-            height: 428px;
+            height: 540px;
         }
     }
     .tns-outer {
@@ -899,3 +916,5 @@ body {
         }
     }
 }
+
+@import 'responsive.scss';

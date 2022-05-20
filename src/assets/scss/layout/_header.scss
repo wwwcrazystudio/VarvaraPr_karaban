@@ -5,6 +5,62 @@
     top: 0;
     right: 0;
     left: 0;
+    &__info {
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 12px;
+        color: #fff;
+        display: none;
+        a {
+            display: inline-block;
+            margin-bottom: 4px;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__burger {
+        width: 40px;
+        height: 40px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #FFFFFF; 
+        border-radius: 50%;
+        span {
+            display: block;
+            width: 27px;
+            height: 2.5px;
+            background: #FACA4E;
+            border-radius: 22px;
+            margin-top: 2px;
+            transition: .3s all;
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+        }
+        transition: .3s all;
+        &.open {
+            border-color: #00000000;
+            transform: translate(20px, -5px);
+            span {
+                background: #fff;
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    transform: rotate(-45deg);
+                    margin-top: -3px;
+                }
+                &:nth-child(3) {
+                    opacity: 0;
+                }
+                &:nth-child(4) {
+                    opacity: 0;
+                }
+            }
+        }
+    }
     &__row {
         display: flex;
         justify-content: space-between;
