@@ -5,6 +5,7 @@
 @import "~sass-rem/rem";
 @import "mixins/utility";
 @import "base/variables";
+@import "~aos/src/sass/aos.scss";
 @import "~magnific-popup/dist/magnific-popup.css";
 @import "base/fonts";
 @import "~jquery-nice-select/css/nice-select";
@@ -674,6 +675,7 @@ body {
         background: #fff;
         padding-right: 25px;
         padding-bottom: 9px;
+        margin-left: 1px;
         &-name {
             @extend %font;
             font-weight: 400;

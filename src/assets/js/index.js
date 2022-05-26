@@ -3,7 +3,10 @@ import '../scss/main.scss';
 import { tns } from "tiny-slider";
 import 'jquery-nice-select';
 import 'magnific-popup';
+import AOS from 'aos';
 $('.select-init').niceSelect();
+
+AOS.init();
 
 $('.image-popup-zoom').magnificPopup({
     type: 'image',
@@ -73,7 +76,7 @@ if($('.gallery__slider_col3').length) {
               },
             767: {
                 gutter: 40,
-                items: 2,
+                items: 3,
               },
             991: {
                gutter: 111,
@@ -96,7 +99,7 @@ if($('.gallery__slider_col2').length) {
               },
             767: {
                 gutter: 40,
-                items: 2,
+                items: 3,
               },
             991: {
                gutter: 111,
@@ -133,6 +136,15 @@ if($('.workers__slider').length) {
               }
           }
     });
+}
+
+if($('.lessons__slider').length) {
+  let slider = tns({
+      container: '.lessons__slider',
+      items: 1,
+      slideBy: 1,
+      gutter: 30,
+  });
 }
 
 if($('.reviews__slider').length) {
