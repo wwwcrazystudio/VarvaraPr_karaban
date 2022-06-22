@@ -4,6 +4,7 @@ import { tns } from "tiny-slider";
 import 'jquery-nice-select';
 import 'magnific-popup';
 import AOS from 'aos';
+
 $('.select-init').niceSelect();
 
 AOS.init();
